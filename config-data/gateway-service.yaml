@@ -1,0 +1,31 @@
+server:
+  port: 8080
+  
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      default-zone: http://localhost:8761/eureka
+  instance:
+    hostname: localhost
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: cashOut-service
+          uri: lb://cashOut-service
+          predicates:
+            - Path=/cashOut/**
+        - id: income-service
+          uri: lb://income-service
+          predicates:
+            - Path=/income/**
+        - id: summary-service
+          uri: lb://summary-service
+          predicates:
+            - Path=/summary/**
