@@ -3,12 +3,12 @@ server:
   
 eureka:
   client:
-    fetch-registry: true
-    register-with-eureka: true
+    fetchRegistry: true
+    registerWithEureka: true
     serviceUrl:
       defaultZone: http://172.29.173.132:30087/eureka
   instance:
-    hostname: 172.29.173.132
+    preferIpAddress: true
 
 spring:
   cloud:
