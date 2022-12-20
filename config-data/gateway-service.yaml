@@ -8,7 +8,7 @@ eureka:
     serviceUrl:
       defaultZone: http://172.29.173.132:30087/eureka
   instance:
-    hostname: localhost
+    hostname: 172.29.173.132
 
 spring:
   cloud:
