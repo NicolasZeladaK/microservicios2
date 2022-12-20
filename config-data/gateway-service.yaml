@@ -7,8 +7,6 @@ eureka:
     registerWithEureka: true
     serviceUrl:
       defaultZone: http://172.29.173.132:30087/eureka
-  instance:
-    preferIpAddress: true
 
 spring:
   cloud:
